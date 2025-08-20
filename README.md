@@ -1,0 +1,1 @@
+Para completar esta prueba técnica hay que seguir las instrucciones que se han enviado en formato PDF.

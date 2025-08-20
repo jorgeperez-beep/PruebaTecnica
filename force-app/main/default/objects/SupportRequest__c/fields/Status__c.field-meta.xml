@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <description>Estado de la solicitud.</description>
+    <label>Estado</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ToManage</fullName>
+                <default>false</default>
+                <label>Por gestionar</label>
+            </value>
+            <value>
+                <fullName>InProcess</fullName>
+                <default>false</default>
+                <label>En proceso</label>
+            </value>
+            <value>
+                <fullName>PendingInternal</fullName>
+                <default>false</default>
+                <label>Pendiente interno</label>
+            </value>
+            <value>
+                <fullName>PendingCustomer</fullName>
+                <default>false</default>
+                <label>Pendiente cliente</label>
+            </value>
+            <value>
+                <fullName>Closed</fullName>
+                <default>false</default>
+                <label>Cerrado</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

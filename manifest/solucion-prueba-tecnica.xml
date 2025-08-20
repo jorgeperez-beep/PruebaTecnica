@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <!-- Rellenar este manifest con los metadatos necesarios para el despliegue de la solución. -->
+    <!-- Nota: Se puede suponer que los datos previos ya están desplegados en el entorno. Es decir, no sería necesario indicar ningún medatado
+    que esté contenido en el manifest "base-prueba-tecnica.xml". Esto es así, siempre y cuando el metadato no se haya modificado del proyecto original.
+    Si se hubiera modificado, se tendría que indicar en este manifest.-->
+    <version>63.0</version>
+</Package>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>SupportRequest__c.ExpectedResolutionDate__c</members>
+        <members>SupportRequest__c.Priority__c</members>
+        <members>SupportRequest__c.Status__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>SupportRequest__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>SupportRequest__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>SupportRequest__c-Solicitud soporte Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>SupportAdmin</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>Admins</members>
+        <name>PermissionSetGroup</name>
+    </types>
+    <version>63.0</version>
+</Package>
