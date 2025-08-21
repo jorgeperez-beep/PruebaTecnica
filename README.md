@@ -4,4 +4,4 @@ username:jorgeperezal15@gmail.com
 pass: PruebaTestSenior1
 
 
-GIT: https://github.com/jorgeperez-beep/PruebaTecnica.git
+GIT HTTPS : https://github.com/jorgeperez-beep/PruebaTecnica.git
