@@ -1,1 +1,4 @@
-Para completar esta prueba técnica hay que seguir las instrucciones que se han enviado en formato PDF.
+Datos ORG playground : 
+
+username:jorgeperezal15@gmail.com
+pass: PruebaTestSenior1
