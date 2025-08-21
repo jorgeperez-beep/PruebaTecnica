@@ -11,7 +11,8 @@ public with sharing class botonSupportController {
         ];
         Integer dias = getDiasPorPrioridad(sr.Priority__c);
         if(sr.ExpectedResolutionDate__c!=null && dias!=null){
-            sr.ExpectedResolutionDate__c = sr.ExpectedResolutionDate__c.addDays(dias);
+            sr.ExpectedResolutionDate__c = botonSupportController.sumarDiasHabiles(Date.today(), dias);
+
         }        
         update sr;
     }
@@ -34,15 +35,22 @@ public with sharing class botonSupportController {
     }
 
     private static Date sumarDiasHabiles(Date fechaInicio, Integer dias) {
-    Date resultado = fechaInicio;
-    Integer contador = 0;
-    while (contador < dias) {
-        resultado = resultado.addDays(1);
-        Integer dow = resultado.toStartOfDay().dayOfWeek();
-        if (dow != DateTime.SUNDAY && dow != DateTime.SATURDAY) {
-            contador++;
+       
+        if (fechaInicio == null || dias == null || dias <= 0) {
+            return fechaInicio;
         }
+        
+
+        Date d = fechaInicio;
+        Integer added = 0;
+
+        while (added < dias) {
+            d = d.addDays(1);
+            Integer dow = d.toStartOfWeek().daysBetween(d);
+            if (dow != 0 && dow != 6) { 
+                added++;
+            }
+        }
+        return d;
     }
-    return resultado;
-}
 }

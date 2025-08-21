@@ -21,7 +21,7 @@ global class UpdateSupportRequestByStatusBatch
                 dias = 5;
             }
             if(sr.ExpectedResolutionDate__c!=null && dias!=null){
-                sr.ExpectedResolutionDate__c = sr.ExpectedResolutionDate__c.addDays(dias);
+                sr.ExpectedResolutionDate__c = DiasHabilesCheck.sumarDiasHabiles(Date.today(), dias);
             }
         }
 

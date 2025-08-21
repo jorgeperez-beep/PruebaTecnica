@@ -16,7 +16,7 @@ public with sharing class SolicitudSoporteService {
                 }
                 if (debeCalcular) {
                     Integer dias = getDiasPorPrioridad(sr.Priority__c);
-                    sr.ExpectedResolutionDate__c = sr.ExpectedResolutionDate__c.addDays(dias);
+                    sr.ExpectedResolutionDate__c = SolicitudSoporteService.sumarDiasHabiles(Date.today(), dias);
                 }
             }    
         }
@@ -35,4 +35,25 @@ public with sharing class SolicitudSoporteService {
             } 
         return null;
     }
+
+    private static Date sumarDiasHabiles(Date fechaInicio, Integer dias) {
+       
+        if (fechaInicio == null || dias == null || dias <= 0) {
+            return fechaInicio;
+        }
+        
+
+        Date d = fechaInicio;
+        Integer added = 0;
+
+        while (added < dias) {
+            d = d.addDays(1);
+            Integer dow = d.toStartOfWeek().daysBetween(d);
+            if (dow != 0 && dow != 6) { 
+                added++;
+            }
+        }
+        return d;
+    }
+
 }
